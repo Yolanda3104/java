@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class UserDAO {
 /*
- * ¸ºÔğÊı¾İ¿âµÄÔöÉ¾¸Ä²é²Ù×÷
+ * è´Ÿè´£æ•°æ®åº“çš„å¢åˆ æ”¹æŸ¥æ“ä½œ
  * 
  */
     private DBUtil db=null;
@@ -20,11 +20,11 @@ public class UserDAO {
         Connection connection=db.getConnection();
         try
         {
-            Statement sql=connection.createStatement();//»ñÈ¡Ö´ĞĞsqlµÄ¶ÔÏó
-            ResultSet resultSet=sql.executeQuery("select * from user where name='"+userId+"' and password='"+userPwd+"'");
+            Statement db=connection.createStatement();
+            ResultSet resultSet=db.executeQuery("select * from user where name='"+userId+"' and password='"+userPwd+"'");
              
             resultSet.last();
-            if(resultSet.getRow()<1) return false;//Î´ÕÒµ½
+            if(resultSet.getRow()<1) return false;//æœªæ‰¾åˆ°
             else return true;
             
         }catch(Exception e)
