@@ -2,12 +2,12 @@ package SRP;
 import java.sql.*;
 public class DBUtil {
 /*
- * ¸ºÔğÊı¾İ¿âµÄÁ¬½Ó£¬¸ÃÀà¿ÉÒÔÌá¹©¶à¸öÊı¾İ¿â²Ù×÷ÀàÖØÓÃ
+ * è´Ÿè´£æ•°æ®åº“çš„è¿æ¥ï¼Œè¯¥ç±»å¯ä»¥æä¾›å¤šä¸ªæ•°æ®åº“æ“ä½œç±»é‡ç”¨
  * */
      private Connection connection=null;
-     private String urlDb;//Êı¾İ¿â 
-     private String user;//ÓÃ»§Ãû
-     private String password;//ÃÜÂë
+     private String urlDb;//æ•°æ®åº“ 
+     private String user;//ç”¨æˆ·å
+     private String password;//å¯†ç 
     public DBUtil() {
          
     }
@@ -24,7 +24,7 @@ public class DBUtil {
     } 
      try
      {
-         connection=DriverManager.getConnection(urlDb, user, password);//Á¬½ÓÊı¾İ¿â
+         connection=DriverManager.getConnection(urlDb, user, password);
      }catch (SQLException e) {
          e.printStackTrace();
     }
