@@ -13,12 +13,12 @@ public class DBUtil {
     }
  Connection getConnection()
  {
-     urlDb="D:/db";
+     urlDb="D:/db.txt";
      user="root";
      password="XXX";
      try
      {
-         Class.forName("db");
+         Class.forName("db.txt");
      }catch (ClassNotFoundException  e) {
          e.printStackTrace();
     } 
